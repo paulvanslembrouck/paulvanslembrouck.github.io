@@ -1,5 +1,6 @@
 // Import lit-html functions
-import { html, render } from '../../node_modules/lit-html/lit-html.js';
+//import { html, render } from '../../node_modules/lit-html/lit-html.js';
+import {html, render} from 'https://unpkg.com/lit-html?module';
 
 // Define a template function
 const myHeader = title =>
