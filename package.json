@@ -1,0 +1,25 @@
+{
+  "name": "paulvanslembrouck.github.io",
+  "version": "1.0.0",
+  "description": "paul-prototypes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulvanslembrouck/paulvanslembrouck.github.io.git"
+  },
+  "keywords": [
+    "{}"
+  ],
+  "author": "Paul Van Slembrouck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulvanslembrouck/paulvanslembrouck.github.io/issues"
+  },
+  "homepage": "https://github.com/paulvanslembrouck/paulvanslembrouck.github.io#readme",
+  "dependencies": {
+    "lit-html": "^1.2.1"
+  }
+}

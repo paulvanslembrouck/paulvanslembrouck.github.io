@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<!-- Meta, title, CSS, favicons, etc. -->
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="paul van slembrouck">
+
+		<title>
+		    Calendar
+		</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="../calendar/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../calendar/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../calendar/css/styles.css" rel="stylesheet">
+		
+		<!-- Imports supported by Polymer -->	
+		<link rel="import" href="../calendar/header.html">
+	</head>
+
+<body data-spy="scroll" data-target="#navigation">
+	<script type="text/javascript">
+		var link = document.querySelector('link[rel="import"]');
+		var content = link.import;
+		var el = content.querySelector('#header');
+		document.body.appendChild(el.cloneNode(true));
+	</script>
+	
+<div id="main-side-nav" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<span style="display:inline-block; margin-bottom:10px;"><strong>CALENDARS</strong></span>
+	<a id="btn-sidenav-close" href="#"><img src="img/close-btn.png" ></a>
+	<div class="panel panel-default">	
+		
+			
+			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		         <input type="checkbox"> My Calendar 
+		         <span class="glyphicon glyphicon-chevron-up icon-collapse" aria-hidden="true"></span>
+		         <span class="glyphicon glyphicon-chevron-down icon-expand" aria-hidden="true"></span>
+	        </a>
+	        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+				  
+			 	    <div class="list-group">
+						<a href="#" class="list-group-item parent-item">
+					  		<label>
+      							<input type="checkbox"> TAGS
+    						</label>
+
+    					</a>
+					    <a href="#" class="list-group-item">
+  							<label>
+  								<input type="checkbox"> No Tag
+  							</label>
+						</a>
+						<a href="#" class="list-group-item">
+  							<label>
+  								<input type="checkbox"> Engineering
+  							</label>
+						</a>
+						<a href="#" class="list-group-item">
+  							<label>
+  								<input type="checkbox"> Admin
+  							</label>
+						</a>
+						<a href="#" class="list-group-item">
+  							<label>
+  								<input type="checkbox"> Company FYI
+  							</label>
+						</a>
+						<a href="#" class="list-group-item">
+		  					+ <span class="hover">Add Tag</span>
+						</a>
+					  	<a href="#" class="list-group-item parent-item">
+					  		<label>
+      							<input type="checkbox"> STATUS
+      							<img class="status-legend" width="16px" src="img/status-legend.png" ></a>
+    						</label>
+    					</a>
+					</div>
+
+			</div>
+	</div>
+
+	<div class="panel panel-default">
+			<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          		<input type="checkbox"> 
+          		Other Calendars
+          		<span class="glyphicon glyphicon-chevron-up icon-collapse" aria-hidden="true"></span> 
+          		<span class="glyphicon glyphicon-chevron-down icon-expand" aria-hidden="true"></span>
+        	</a>
+        	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  
+				  	<div class="list-group">
+					  <a href="#" class="list-group-item">
+					  		<label>
+      							<input type="checkbox"> George Costanza
+    						</label>
+    					</a>
+					  	<a href="#" class="list-group-item">
+					  		<label>
+      							<input type="checkbox"> Jerry Seinfeld
+    						</label>
+    					</a>
+					 	<a href="#" class="list-group-item">
+					 		<label>
+      							<input type="checkbox"> Elaine Benes
+    						</label>
+					 	</a>
+					 	<a href="#" class="list-group-item">
+					 		<label>
+      							<input type="checkbox"> Cosmo Kramer
+    						</label>
+					 	</a>
+					 	<a href="#" class="list-group-item">
+					 		<label>
+      							<input type="checkbox"> Newman
+    						</label>
+					 	</a>
+					 	<a href="#" class="list-group-item">
+					 		<label>
+      							<input type="checkbox"> Uncle Leo
+    						</label>
+					 	</a>
+					 	<a href="#" class="list-group-item">
+					 		<label>
+      							+ <span class="hover">Add Person or Team</span>
+    						</label>
+					 	</a>
+					</div>
+
+			</div>
+	</div>
+
+
+
+	</div>
+</div>
+
+<div class="main main-calendar">
+
+	<div class="toolbar">
+			<form class="form-inline top-tools">
+				<div class="form-group">
+						<button id="btn-main-sidebar" type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+						<a id="btn-create" class="btn btn-success" href="book.html"><img src="img/icon-create.png" /> Create</a>
+						<input type="search" class="form-control" id="calSearch" placeholder="Search...">
+				
+					<div id="settings">
+			 			<button class="btn btn-default btn-inbox"><img class="" src="img/inbox@1x.png" /></button>
+						<div class="main-dropdown">
+							  <button class="btn btn-default btn-xs dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							    <div class="my-settings">
+							    	<img class="suggest-icon" src="img/avatar.png" /> 
+							    </div>
+							    <div class="my-settings">
+							    	Paul
+							    	<br /><span class="my-status">&#9679; Available</span>
+							    </div>
+							    <div class="my-settings">
+							    	<span class="caret"></span>
+							    </div>
+							  </button>
+							  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+							    <li><a href="settings.html">
+							    	<img class="menu-icon" src="img/icon-settings.png" />
+							    	Calendar Settings</a>
+							    </li>
+							    <li><a href="status.html">
+							    	<img class="menu-icon" src="img/icon-status.png" /> 
+							    	View Status</a>
+							    </li>
+							    <li><a href="manage.html">
+							    	<img class="menu-icon" src="img/icon-subs.png" /> 
+							    	Subscriptions</a>
+							    </li>
+							    <li><a href="pto.html">
+							    	<img class="menu-icon" src="img/icon-pto.png" /> 
+							    	PTO Summary</a>
+							    </li>
+							  </ul>
+							</div>
+					</div>
+
+				</div>
+			</form>
+
+		
+		<div id="calendar-table">
+			<div id="control-bar">
+				<div class="btn-toolbar toolbar-left" role="toolbar" aria-label="...">
+			 		<div class="btn-group btn-group-sm" role="group" aria-label="...">
+			 			<button class="btn btn-default">Day</button>
+			 			<button class="btn btn-default active">Week</button>
+			 			<button class="btn btn-default">Month</button>
+			 			<button class="btn btn-default">List</button>
+			 		</div>
+				</div>
+				<div class="toolbar-center"><strong>June</strong> 2016</div>
+				<div class="btn-group btn-group-sm toolbar-right" role="group" aria-label="...">
+		 			<button class="btn btn-default"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
+		 			<button class="btn btn-default active">Today</button>
+		 			<button class="btn btn-default"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
+			 	</div>
+			 	<table class="week-view table table-bordered table-condensed">
+					<thead><tr class="header">
+							<th>&nbsp;&nbsp;&nbsp;</th><th>5 Sunday</th><th>6 Monday</th><th>7 Tuesday</th><th>8 Wednesday</th><th>9 Thursday</th><th>10 Friday</th><th>11 Saturday</th>
+						</tr>
+					</thead>
+				</table>
+			</div>	
+			<div class="ST-table">
+				<div id="cal-content">
+				<table class="week-view table table-bordered table-condensed">
+					<tbody>
+						<tr class="">
+							<td>9 AM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td><a href="meeting.html"><div class="meeting-item">Discuss Import/Export Business Health</div></a></td>
+						</tr>
+						<tr class="">
+							<td>10 AM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>11 AM</td><td> </td><td><a href="meeting.html"><div class="meeting-item">Discuss Import/Export Business Health</div></a></td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>12 AM</td><td> </td><td><a href="meeting.html"><div class="meeting-item">Discuss Import/Export Business Health</div></a> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>1 PM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>2 PM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>3 PM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>4 PM</td><td> </td><td> </td><td> </td><td> </td><td><a href="meeting.html"><div class="meeting-item">Discuss Import/Export Business Health</div></a></td><td> </td><td> </td>
+						</tr>
+						<tr class="">
+							<td>5 PM</td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td><a href="meeting.html"><div class="meeting-item">Discuss Import/Export Business Health</div></a></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+
+
+				
+	</div>
+
+
+	
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/react/react.min.js"></script>
+<script src="js/react/JSXTransformer.js"></script>
+<script src="js/app.js"></script>
+<!--<script type="text/jsx" src="js/app-react.js"></script>-->
+
+
+
+</body>
+</html>

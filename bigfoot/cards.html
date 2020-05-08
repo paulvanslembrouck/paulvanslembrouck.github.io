@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<!-- Meta, title, CSS, favicons, etc. -->
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="paul van slembrouck">
+
+		<title>
+		    Diffs
+		</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="../bigfoot/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../bigfoot/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../bigfoot/css/cards.css" rel="stylesheet">
+		
+		<!-- Imports supported by Polymer -->	
+		<link rel="import" href="../bigfoot/header.html">
+	</head>
+
+<body data-spy="scroll" data-target="#navigation">
+	<script type="text/javascript">
+		var link = document.querySelector('link[rel="import"]');
+		var content = link.import;
+		var el = content.querySelector('#header');
+		document.body.appendChild(el.cloneNode(true));
+	</script>
+
+<div id="overlay"></div>
+
+<div id="main-side-nav" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel panel-default">		
+			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	        HOME    
+	        <a id="btn-sidenav-close" href="#"><img src="img/close-btn.png" ></a>
+	        </a>
+	        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+				  
+			 	    <div class="list-group">
+					  <a href="#section1" class="list-group-item active">Blocking Others (Reviewer)</a>
+					  <a href="#section2" class="list-group-item">Action Required</a>
+					  <a href="#section3" class="list-group-item">Landing</a>
+					  <a href="#section5" class="list-group-item">Waiting for Others</a>
+					  <a href="#section6" class="list-group-item">CC'ed</a>
+					</div>
+
+			</div>
+	</div>
+
+	<div class="panel panel-default">
+			<a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          	SAVED SEARCHES
+        	</a>
+        	<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+				  
+				  	<div class="list-group">
+					  <a href="#" class="list-group-item">My Team Diffs <img width="18px" src="img/settings-light.png" ></a>
+					  <a href="#" class="list-group-item">Calendar diffs <img width="18px" src="img/settings-light.png" ></a>
+					  <a href="#" class="list-group-item">Mobile Home diffs <img width="18px" src="img/settings-light.png" ></a>
+					  <a href="card-search.html" class="list-group-item">200+ line diffs by gc3 <img width="18px" src="img/settings-light.png" ></a>
+					</div>
+
+			</div>
+	</div>
+
+
+</div>
+
+
+<div class="main main-dashboard">
+
+	<div class="content">
+		<div id="search">
+			<button id="btn-main-sidebar" type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+			<form class="form-inline dropdown">
+				<div class="form-group">
+						<button type="button" class="btn btn-default btn-search-box" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<input type="search" class="form-control" id="taskSearch" placeholder="Search..." value="">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dLabel">
+    						<li><a>Joe Smith</a></li>
+    						<li role="separator" class="divider"></li>
+    						<li><a>Author: Joe Smith</a></li>
+    						<li><a>Reviewer: Joe Smith</a></li>
+    						<li><a>Subscriber: Joe Smith</a></li>
+    						<li role="separator" class="divider"></li>
+    						<li class="section">Filter By</li>
+    						<li><a>Last Edit Date</a></li>
+    						<li><a>Lines</a></li>
+    						<li><a>Status</a></li>
+    						<li><a>Author</a></li>
+    						<li><a>Reviewer</a></li>
+    						<li><a>Subscriber</a></li>
+    						<li><a>Repository</a></li>
+  						</ul>
+							
+				</div>
+			</form>
+			<div id="settings">Settings <img width="18px" src="img/settings-light.png" ></div>
+			<div class="token-bar">
+
+			</div>
+		</div>
+
+		<div id="list-cards">
+			
+			<div class="cards">
+				
+
+				<div class="card-group" id="section1">
+				<!-- group -->
+					<h4>Blocking Others <span class="count">&#8226; 3</span></h4>
+					
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-2.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3777687</span>
+							<div class="status-tag status-grey">
+								<span class="status-circle">&#9679;</span> Changes Planned
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta">12 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-3.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560999</span>
+							<div class="status-tag status-orange">
+								<span class="status-circle">&#9679;</span> Needs Review
+							</div>
+							<span class="name">[projects] this is a really really really really long long long long long revision name</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: 
+								<span class="reviewer">tmodbry</span>, 
+								<span class="reviewer">asidfhv</span>, 
+								<span class="reviewer">PHP TEAM</span>, 
+								<span class="reviewer">sdfgbs</span>, 
+								<span class="reviewer">ewrnglkj</span>, 
+								<span class="reviewer">iowubvz</span>
+								&#8226; 277 lines
+							</div>
+							<div class="diff-description-secondary">blocked by D3520804, D3291463</div>
+							<div class="meta">12 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Unsubscribe</button>
+							</div>
+						</div>
+					</div></a>
+
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-1.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560687</span>
+							<div class="status-tag status-green">
+								<span class="status-circle">&#9679;</span> Accepted
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> 
+								&#8226; 277 lines
+							</div>
+							<div class="diff-description-secondary">Lint failed
+							</div>
+							<div class="meta">4/8, 2:56pm, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-success btn-xs">Ship It</button>
+							</div>
+						</div>
+					</div></a>
+
+
+				</div>
+
+				
+
+
+				<div class="card-group" id="section2">
+				<!-- group -->
+					<h4>Action Required <span class="count">&#8226; 6</span></h4>
+					<a href="#"><div class="card card-warning-high">
+						<div class="left">
+							<img src="img/avatar-2.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3777687</span>
+							<div class="status-tag status-grey">
+								<span class="status-circle">&#9679;</span> Changes Planned
+							</div>
+							<span class="name">[projects] this is a really really really really long long long long long revision name</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: 
+								<span class="reviewer">tmodbry</span>, 
+								<span class="reviewer">asidfhv</span>, 
+								<span class="reviewer">PHP TEAM GO</span>, 
+								<span class="reviewer">sdfgrbtbs</span>, 
+								<span class="reviewer">ewberrnglkj</span>, 
+								<span class="reviewer">iowubvz</span>
+								&#8226; 277 lines
+							</div>
+
+
+							<div class="meta"><span class="warning"><img src="img/icon_warning_high.png" />8 days ago</span> By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card card-warning-high">
+						<div class="left">
+							<img src="img/avatar-3.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560999</span>
+							<div class="status-tag status-orange">
+								<span class="status-circle">&#9679;</span> Needs Review
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="diff-description-secondary">blocked by D3520804, D3291463</div>
+							<div class="meta"><span class="warning"><img src="img/icon_warning_high.png" />8 days ago</span> By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Unsubscribe</button>
+							</div>
+						</div>
+					</div></a>
+
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-4.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560687</span>
+							<div class="status-tag status-green">
+								<span class="status-circle">&#9679;</span> Accepted
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta">12 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-success btn-xs">Ship It</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-5.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3777687</span>
+							<div class="status-tag status-grey">
+								<span class="status-circle">&#9679;</span> Changes Planned
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta">4 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-5.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560999</span>
+							<div class="status-tag status-orange">
+								<span class="status-circle">&#9679;</span> Needs Review
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="diff-description-secondary">blocked by D3520804, D3291463</div>
+							<div class="meta">4 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Unsubscribe</button>
+							</div>
+						</div>
+					</div></a>
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-1.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560687</span>
+							<div class="status-tag status-green">
+								<span class="status-circle">&#9679;</span> Accepted
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta">4 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-success btn-xs">Ship It</button>
+							</div>
+						</div>
+					</div></a>
+					
+					
+					
+				</div>
+
+
+
+				<div class="card-group" id="section3">
+				<!-- group -->
+					<h4>Landing <span class="count">&#8226; 0</span></h4>
+					
+					
+				</div>
+
+				<div class="card-group" id="section4">
+
+				<div class="card-group" id="section5">
+				<!-- group -->
+					<h4>Waiting for Others <span class="count">&#8226; 6</span></h4>
+					
+					<a href="#"><div class="card card-warning-high">
+						<div class="left">
+							<img src="img/avatar-2.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3777687</span>
+							<div class="status-tag status-grey">
+								<span class="status-circle">&#9679;</span> Changes Planned
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta"><span class="warning"><img src="img/icon_warning_high.png" />8 days ago</span> By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card card-warning-high">
+						<div class="left">
+							<img src="img/avatar-3.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560999</span>
+							<div class="status-tag status-orange">
+								<span class="status-circle">&#9679;</span> Needs Review
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="diff-description-secondary">blocked by D3520804, D3291463</div>
+							<div class="meta"><span class="warning"><img src="img/icon_warning_high.png" />8 days ago</span> By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Unsubscribe</button>
+							</div>
+						</div>
+					</div></a>
+
+					<a href="#"><div class="card card-warning-medium">
+						<div class="left">
+							<img src="img/avatar-1.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560687</span>
+							<div class="status-tag status-green">
+								<span class="status-circle">&#9679;</span> Accepted
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta"><span class="warning-medium"><img src="img/icon_warning_medium.png" />2 days ago</span> By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button> 
+								<button class="btn btn-success btn-xs">Ship It</button>
+							</div>
+						</div>
+					</div></a>
+
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-1.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560687</span>
+							<div class="status-tag status-green">
+								<span class="status-circle">&#9679;</span> Accepted
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: 
+								<span class="reviewer">tmodbry</span>, 
+								<span class="reviewer">asidfhv</span>, 
+								<span class="reviewer">PHP TEAM GO</span>, 
+								<span class="reviewer">sdfgrbtbs</span>, 
+								<span class="reviewer">ewberrnglkj</span>, 
+								<span class="reviewer">iowubvz</span>
+								&#8226; 277 lines
+							</div>
+							<div class="meta">4/8, 2:56pm, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button> 
+								<button class="btn btn-success btn-xs">Ship It</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-2.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3777687</span>
+							<div class="status-tag status-grey">
+								<span class="status-circle">&#9679;</span> Waiting for TrunkAgent
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="meta">4 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Run All Tests</button>
+							</div>
+						</div>
+					</div></a>
+					
+					<a href="#"><div class="card">
+						<div class="left">
+							<img src="img/avatar-3.jpg" />
+						</div>
+						<div class="right">
+							<span class="diff-id">D3560999</span>
+							<div class="status-tag status-orange">
+								<span class="status-circle">&#9679;</span> Needs Review
+							</div>
+							<span class="name">[projects] add gantt styling</span>
+							<div class="diff-description">Project: facebook-www &#8226; Reviewers: <span class="reviewer">Tomek Obdrobny</span> &#8226; 277 lines</div>
+							<div class="diff-description-secondary">blocked by D3520804, D3291463</div>
+							<div class="meta">4 hours ago, By: <span class="author">paulvs</span></div>
+							<div class="actions">
+								<button class="btn btn-default btn-xs">Unsubscribe</button>
+							</div>
+						</div>
+					</div></a>
+					
+					
+					
+
+					<a href="#"><div class="card">
+						<div class="full-width">
+							
+							<a class="full-button" href="">
+								<div class="see-all">View All (86 more)</div>
+							</a>
+
+						</div>
+					</div></a>
+					
+				</div>
+
+				<div class="card-group" id="section6">
+				<!-- group -->
+					<h4>CC'ed <span class="count">&#8226; 0</span></h4>
+					
+					
+				</div>
+
+
+
+				
+
+				
+		
+			</div>
+		</div>
+				
+	</div>
+
+
+	
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/react/react.min.js"></script>
+<script src="js/react/JSXTransformer.js"></script>
+<script src="js/app.js"></script>
+<!--<script type="text/jsx" src="js/app-react.js"></script>-->
+
+
+
+</body>
+</html>
