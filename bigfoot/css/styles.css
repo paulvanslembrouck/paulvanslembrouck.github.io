@@ -3,11 +3,11 @@
 }
 
 body {
-	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Lato','Helvetica', 'Arial', sans-serif;
 	min-width: 800px;
-	font-size: 12px;
+	font-size: 1.25rem;
 	color: #4E5665;
-	background-color: #E9EAED;
+	background-color: #f2f2f2;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -79,8 +79,10 @@ a:active, a:hover, a:link, a:visited {
 
 /* HEADER */
 .header {
-	height: 42px;
+	height: 60px;
+	font-size: 1.25rem;
 	width: 100%;
+	padding: 14px;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -90,10 +92,13 @@ a:active, a:hover, a:link, a:visited {
 	background-repeat: repeat-x;
     background-size: auto;
     background-position: 0 0;
-    background-color: #4267b2;
+    background-color: #fff;
     border: 0;
-    border-bottom: 1px solid #133783;
-    box-shadow: none;
+    -webkit-box-shadow: 0 0.01rem 0.4rem #bbb;
+    box-shadow: 0 0.01rem 0.4rem #bbb;
+}
+
+
 }
 
 .notify {
@@ -143,13 +148,13 @@ a:active, a:hover, a:link, a:visited {
 
 #bluebar-left {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 20px;
     margin: 2px 12px 0px 0px;
 }
 
 .header-tool-name {
-	font-weight: bold;
-	color: #fff;
+	font-weight: 700;
+	color: #002322;
 }
 
 #view-title {
@@ -269,9 +274,12 @@ a:active, a:hover, a:link, a:visited {
 .table-header {
 	height: 44px;
 	position: relative;
-	background-color: #F6F7F9;
-	border: 1px solid #D9DADD;
-	padding: 12px;
+	padding: 12px 0;
+}
+
+.table-content {
+	background-color: #fff;
+	padding: 18px;
 }
 
 .header-name {
@@ -279,6 +287,17 @@ a:active, a:hover, a:link, a:visited {
 	font-size: 14px;
     font-weight: bold;
     vertical-align: middle;
+}
+
+.header-row {
+	height: 52px;
+}
+
+.table>thead>tr>th {
+	color: #809190;
+	font-weight: 400;
+	text-transform: uppercase;
+	vertical-align: middle;
 }
 
 .table-controls {
@@ -616,19 +635,20 @@ a.fullscreen:hover {
 
 /* Sidebar navigation */
 #main-side-nav {
-	background-color: #31333F;
+	background-color: #002223;
 	border-right: 1px solid #DCDEE3;
 	color: #b5bac3;
+	font-size: 16px;
 	width: 200px;
 	position: fixed;
-	top: 42px;
+	top: 60px;
 	left: 0;
 	bottom: 0;
 	z-index:800;
 }
 
 #main-side-nav a {
-	color: #b5bac3
+	color: #fff
 }
 
 #btn-sidenav-close {
@@ -677,6 +697,7 @@ a.fullscreen:hover {
 #main-side-nav .list-group-item {
 	background-color: rgba(0,0,0,0);
 	border: none;
+	font-size: 1.5rem;
 	padding-left: 22px;
 }
 
@@ -1011,7 +1032,7 @@ a.fullscreen:hover {
 }
 
 .main-bigfoot .content {
-	margin: 56px auto;
+	margin: 80px auto;
 	background-color: white;
 	width: 960px;
 }
@@ -1053,7 +1074,7 @@ a.fullscreen:hover {
 #btn-main-sidebar {
 	margin-right: 8px;
 	margin-top: -4px;
-    color: #fff;
+    color: #002322;
 }
 
 /* WEEK VIEW */
