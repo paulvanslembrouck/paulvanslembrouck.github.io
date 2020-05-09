@@ -47,10 +47,3 @@ const myTemplate = name =>
 var targetTest = document.querySelector('#test');
 render(myTemplate('Paul'), targetTest);
 
-const myTemplate = name =>
-	html`
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-	`;
-
-var targetTest = document.querySelector('#test');
-render(myTemplate('Paul'), targetTest);
