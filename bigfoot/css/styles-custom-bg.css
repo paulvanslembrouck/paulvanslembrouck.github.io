@@ -17,6 +17,10 @@ a:active, a:hover, a:link, a:visited {
 	text-decoration: none;
 }
 
+td > a:active, td > a:hover, td > a:link, td > a:visited {
+	text-decoration: underline;
+}
+
 .container-fluid {
 	/*max-width: 1600px;*/
 	padding: 0px;
@@ -45,6 +49,28 @@ a:active, a:hover, a:link, a:visited {
 
 }
 	
+/* Buttons */
+.btn {
+	background-image: none;
+	font-weight: bold;
+	box-shadow: none;
+	text-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+
+.btn-default {
+	color: rgb(75, 79, 86);
+	background-color: rgb(246, 247, 249);
+	border-color: #ced0d4;
+}
+
+.btn-success {
+	background-color: #00afaa;
+	border-color: #00afaa;
+}
+
 
 /* HEADER */
 #header {
@@ -174,6 +200,10 @@ a:active, a:hover, a:link, a:visited {
 	display: inline-block;
 	height: 100vh;
 
+}
+
+.content > a {
+	text-decoration: underline;
 }
 
 tr {
