@@ -104,9 +104,6 @@ a:active, a:hover, a:link, a:visited {
     box-shadow: 0 0.01rem 0.4rem #bbb;
 }
 
-
-}
-
 .notify {
 	float: right;
 }
@@ -136,10 +133,6 @@ a:active, a:hover, a:link, a:visited {
 	margin-right: 12px;
 }
 
-
-#bluebar-left img {
-
-}
 
 #bluebar-right img{
     margin-top: 7px;
@@ -262,22 +255,22 @@ a:active, a:hover, a:link, a:visited {
 
 .table-large {
 	margin: 16px auto 0 auto;
-	padding: 0 16px 0 16px;
 	min-width: 960px;
+	padding: 0 16px 0 16px;
 }
 
 .table-med {
 	margin: 16px auto 0 auto;
-	padding: 0 16px 0 16px;
-	min-width: 640px;
 	max-width: 1440px;
+	min-width: 640px;
+	padding: 0 16px 0 16px;
 }
 
 .table-small {
 	margin: 16px auto 0 auto;
-	padding: 0 16px 0 16px;
-	min-width: 640px;
 	max-width: 960px;
+	min-width: 640px;
+	padding: 0 16px 0 16px;
 }
 
 .table-header {
@@ -302,6 +295,10 @@ a:active, a:hover, a:link, a:visited {
 	font-weight: 400;
 	text-transform: uppercase;
 	vertical-align: middle;
+}
+
+.table>tbody>tr>td {
+	cursor: pointer;
 }
 
 .table-controls {

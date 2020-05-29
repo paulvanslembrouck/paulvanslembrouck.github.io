@@ -1,12 +1,11 @@
 
 
 body {
-	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Lato','Helvetica', 'Arial', sans-serif;
 	min-width: 800px;
-	font-size: 12px;
+	font-size: 1.25rem;
 	color: #4E5665;
-	background-color: #E9EAED;
-	background-image: url('../img/forest-mist.jpg');
+	background-color: #f2f2f2;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -49,22 +48,19 @@ a:active, a:hover, a:link, a:visited {
 
 /* HEADER */
 #header {
-	height: 42px;
+	height: 60px;
+	font-size: 1.25rem;
 	width: 100%;
+	padding: 14px;
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	overflow: hidden;
 	z-index: 1000;
-	padding: 6px 15px 0px 15px;
-	background-image: url('../img/header-bg.png');
-	background-repeat: repeat-x;
-    background-size: auto;
-    background-position: 0 0;
-    background-color: #3a5795;
+    background-color: #fff;
     border: 0;
-    border-bottom: 1px solid #133783;
-    box-shadow: none;
+    -webkit-box-shadow: 0 0.01rem 0.4rem #bbb;
+    box-shadow: 0 0.01rem 0.4rem #bbb;
 }
 
 .notify {
@@ -97,9 +93,8 @@ a:active, a:hover, a:link, a:visited {
 }
 
 
-#bluebar-right img, #bluebar-left img {
-	height: 26px;
-
+#bluebar-right img{
+	margin-top: 7px;
 }
 
 #bluebar-right {
@@ -111,8 +106,13 @@ a:active, a:hover, a:link, a:visited {
 
 #bluebar-left {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 20px;
     margin: 2px 12px 0px 0px;
+}
+
+.header-tool-name {
+	font-weight: 700;
+	color: #002322;
 }
 
 #view-title {
@@ -177,6 +177,14 @@ a:active, a:hover, a:link, a:visited {
 }
 
 tr {
+	cursor: pointer;
+}
+
+td { 
+	cursor: pointer;
+}
+
+.table>tbody>tr>td {
 	cursor: pointer;
 }
 
@@ -310,7 +318,7 @@ a.fullscreen:hover {
 	width: 200px;
 	height: 100vh;
 	position: fixed;
-	top: 42px;
+	top: 60px;
 	left: 0px;
 	z-index:800;
 }
@@ -508,7 +516,7 @@ a.list-group-item:hover {
 }
 
 .main-dashboard .content {
-	margin: 60px auto;
+	margin: 96px auto;
 	min-width: 600px;
 	max-width: 1280px;
 	height: 100vh;

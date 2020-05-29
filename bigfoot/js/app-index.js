@@ -1,14 +1,11 @@
 $(document).ready(function() {
 
-
 	$( "#content" ).delegate( "*", "focus blur", function() {
 	  var elem = $( this );
 	  setTimeout(function() {
 	    elem.toggleClass( "focused", elem.is( ":focus" ) );
 	  }, 0 );
 	});
-
-
 
 	$("#main-side-filterbar").hide();
 
