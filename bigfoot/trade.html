@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<!-- Meta, title, CSS, favicons, etc. -->
+    	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="paul van slembrouck">
+
+		<title>
+		    Table Interactions
+		</title>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="../bigfoot/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../bigfoot/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../bigfoot/css/styles-responsive.css" rel="stylesheet">
+	</head>
+
+<body data-spy="scroll" data-target="#navigation">
+	<script type="module" src="src/templates.js"></script>
+	
+<div id="main-side-nav" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div id="navWrapper"></div>
+</div>
+
+<div class="main main-dashboard">
+	<div id="headerWrapper"></div>
+
+	<div class="toolbar1">
+		<div class="toolbar-left"><img src="img/trade/toolbar1-left.png" height="36px" /></div>
+		<div class="toolbar-right"><img src="img/trade/toolbar1-right.png" height="36px" /></div>
+	</div>
+	
+	<div class="toolbar2">
+		<div class="toolbar-left"><img src="img/trade/toolbar2-left.png" height="36px" /></div>
+		<div class="toolbar-right"><button id="view-trade" class="btn btn-default">View Trade</button></div>
+	</div>
+
+	<!--MAIN CONTENT CONTAINER-->
+	<div class="content">
+			
+		<div id="task-table">
+			<span class="card-title">Target Allocation</span>
+			<span class="card-subtitle">(252,000)</span>
+			<div class="form-group">
+				<button class="btn btn-default btn-xs">Allocation Tools</button>
+			</div>
+			
+
+			<div class="ST-table">
+				<table class="table table-striped table-bordered table-hover table-condensed">
+					<thead><tr class="header">
+							<th></th>
+							<th>Account Name</th>
+							<th>Beginning Qty</th>
+							<th>Beginning Pos. %</th>
+							<th>Target Alloc. Qty</th>
+							<th>Target Alloc. %</th>
+							<th>Post-Trade Qty</th>
+							<th>End Pos. %</th>
+							<th>End Local Crncy (JPY)</th>
+							<th>End Alloc. Cash</th>
+							<th>Local Value (JPY)</th>
+							<th>Settlement Value (JPY)</th>
+							<th>Base Value (JPY)</th>
+							<th>End Lo Market (JPY)</th>
+							<th>End Se Market (JPY)</th>
+							<th>End Base Market (USD)</th>
+							<th>Restrictions</th>
+							<th>Guidelines</th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Heavenly Insurance</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Kirkwood Insurance</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><span class="glyphicon glyphicon-unchecked"></span></td>
+						<td><a href="index.html">Aspen Insurance Co</a></td>
+						<td>10,000</td>
+						<td>0.55%</td>
+						<td>5,000</td>
+						<td>0.55%</td>
+						<td>15,000</td>
+						<td>4.50%</td>
+						<td>55,000</td>
+						<td>750,000</td>
+						<td>250,000</td>
+						<td>120,000</td>
+						<td>1,250,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td>750,000</td>
+						<td></td>
+						<td></td>
+					</tr>
+					</tbody>
+				</table>		
+			</div>
+		</div>
+
+		<div id="task-detail">
+			<div id="task-header">
+				<div class="task-title">Guidewire 1.25%
+					<br/>Due 5/25/21, AAA Rated
+				</div>
+				<a id="task-btn-close" href="#"><img src="img/close-btn.png" ></a>
+			</div>
+			<div class="inspect-content">
+				<img class="img-responsive" width="312px" src="img/trade/inspect-1.png" >
+				<hr>
+				<div class="task-subtitle">Valuation & Details</div>
+				<img class="img-responsive" width="314px"src="img/trade/inspect-2.png" >
+			</div>
+		</div>
+
+		<div id="account-preview">
+			<div id="task-header">
+				<div class="task-label">Account</div>
+				<div class="task-title">Kirkwood Insurance</div>
+				<a id="account-btn-close" href="#"><img src="img/close-btn.png" ></a>
+			</div>
+			<div class="inspect-content">
+				<img class="img-responsive" width="312px" src="img/trade/account-1.png" >
+				<hr>
+				<div class="task-subtitle">Industry Exposure </div>
+				<img class="img-responsive" width="314px"src="img/trade/account-2.png" >
+				<hr>
+				<div class="task-subtitle">Country Exposure</div>
+				<img class="img-responsive" width="314px"src="img/trade/account-3.png" >
+				<hr>
+				<div class="task-subtitle">Restrictions</div>
+				<img class="img-responsive" width="314px"src="img/trade/account-4.png" >
+				<hr>
+				<div class="task-subtitle">Contract</div>
+				<img class="img-responsive" width="314px"src="img/trade/account-5.png" >
+			</div>
+		</div>
+					
+
+
+				
+	</div>
+
+
+	
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/react/react.min.js"></script>
+<script src="js/react/JSXTransformer.js"></script>
+<script src="js/app.js"></script>
+<!--<script type="text/jsx" src="js/app-react.js"></script>-->
+
+
+
+</body>
+</html>

@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
 	$( "#content" ).delegate( "*", "focus blur", function() {
 	  var elem = $( this );
 	  setTimeout(function() {
@@ -8,22 +6,31 @@ $(document).ready(function() {
 	  }, 0 );
 	});
 
-
-
-	$("#main-side-nav" ).hide();
+	$("#main-side-nav" ).addClass("nav-narrow");
 	$("#main-side-filterbar").hide();
 
 	// TABLE WITH INSPECTOR
-	$("#task-inspect" ).hide();
+	$("#task-detail").hide();
+	$("#account-preview").hide();
 
-	$("tr").click(function() {
-	  $("#task-inspect").show();
-	  $(".main").addClass("main-sidebar");
+	$("#view-trade").click(function() {
+		$("#account-preview").hide();
+		$("#task-detail").show();
+	  $(".main").addClass("main-inspect");
+	});
+	$("#task-btn-close").click(function() {
+		$("#task-detail" ).hide();
+	  $(".main").removeClass("main-inspect");
 	});
 
-	$("#btn-close").click(function() {
-	  $("#task-inspect" ).hide();
-	  $(".main").removeClass("main-sidebar");
+	$("tr").click(function() {
+		$("#task-detail").hide();
+		$("#account-preview").show();
+	  $(".main").addClass("main-inspect");
+	});	
+	$("#account-btn-close").click(function() {
+		$("#account-preview" ).hide();
+	  $(".main").removeClass("main-inspect");
 	});
 
 	$(".form-element").keypress(function (e) {
@@ -54,7 +61,7 @@ $(document).ready(function() {
 	// SIDEBAR NAVIGATION
 	$("#btn-main-sidebar").click(function() {
 	  	$(".main").toggleClass("main-dashboard-sidebar");
-	  	$("#main-side-nav").toggle();
+	  	$("#main-side-nav").toggleClass("nav-narrow");
 	  	console.log("click to open");
 	});
 
@@ -63,9 +70,6 @@ $(document).ready(function() {
 		console.log("click");
 	 	$(this).toggleClass("collapsed");
 	});
-
-
-
 
 	$(window).scroll(function(){
 	  var y = $(window).scrollTop();
